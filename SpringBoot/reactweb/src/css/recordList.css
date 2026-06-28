@@ -1,0 +1,123 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.table th {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.table td {
+    background-color: #ecf0f1;
+}
+
+#delete {
+    color: #c84536;
+    text-decoration: none;
+}
+
+#delete:hover {
+    color: #a42d1d;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.table .automation-activated td {
+    background: #a3dd8d !important;
+}
+
+.table .automation-deactivated td {
+    background: #f48b81 !important;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.buttons-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.btn-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    margin: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-link:hover, .btn-link:focus {
+    background-color: #0056b3;
+    color: #e2e2e2;
+}
+
+.btn-link:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+#timer {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#timer input[type='number'] {
+    display: inline-block;
+    width: 100px;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+}
+
+#time {
+    width: 100px;
+}
+
+#timer input[type='number']:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}

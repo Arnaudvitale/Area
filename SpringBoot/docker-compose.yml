@@ -1,0 +1,53 @@
+services:
+  db:
+    image: postgres:16
+    container_name: area-db
+    environment:
+      POSTGRES_DB: area
+      POSTGRES_USER: area
+      POSTGRES_PASSWORD: area
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  server:
+    build:
+      context: ./backend
+    container_name: server-app
+    env_file:
+      - path: ./backend/.env
+        required: false
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/area
+      DB_USERNAME: area
+      DB_PASSWORD: area
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+  client_mobile:
+    build:
+      context: ./ReactNativeApp
+    container_name: reactnative-app
+    volumes:
+      - ./ReactNativeApp:/app
+      - common-volume:/apk
+    tty: true
+    stdin_open: true
+
+  client_web:
+    build:
+      context: ./reactweb
+    container_name: reactweb-app
+    ports:
+      - "8081:3000"
+    volumes:
+      - common-volume:/apk
+    depends_on:
+      - server
+
+volumes:
+  common-volume:
+  db-data:

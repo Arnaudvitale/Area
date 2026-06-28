@@ -1,0 +1,2 @@
+class Flux < ApplicationRecord
+end
