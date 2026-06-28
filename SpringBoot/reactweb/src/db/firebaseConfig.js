@@ -3,13 +3,13 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
 
 const firebaseConfig = {
-    apiKey: "REMOVED_FIREBASE_API_KEY",
-    authDomain: "area-407612.firebaseapp.com",
-    projectId: "area-407612",
-    storageBucket: "area-407612.appspot.com",
-    messagingSenderId: "685011442945",
-    appId: "1:685011442945:web:3b8d3f147b40e5fbbd0f00",
-    measurementId: "G-SMD9VS87VW"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 if (!firebase.apps.length) {
