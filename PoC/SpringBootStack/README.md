@@ -42,4 +42,37 @@ The server starts on port **8080**. A quick check:
 curl http://localhost:8080/about.json
 ```
 
+## Mini example
+
+A minimal runnable Spring Boot API lives in [app/](./app). It exposes a single
+`/ping` route and has no database, so it runs on its own.
+
+Run it:
+
+```
+cd app
+mvn spring-boot:run
+```
+
+Then:
+
+```
+curl http://localhost:8080/ping
+# {"status":"ok"}
+```
+
+Run the test:
+
+```
+cd app
+mvn test
+```
+
+Expected output:
+
+```
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+BUILD SUCCESS
+```
+
 The full implementation lives in the [SpringBoot](../../SpringBoot) folder.

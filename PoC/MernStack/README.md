@@ -64,3 +64,35 @@ routes available:
 - **/record/update:id** (update a record)
 
 - **/:id** (with delete method, it destroy)
+
+## Mini example
+
+A minimal runnable Express API lives in [app/](./app). It exposes a few routes
+(`/ping`, `GET /records`, `POST /records`) with an in-memory store, so it runs
+without a MongoDB instance.
+
+Run it:
+
+```
+cd app
+npm install
+npm start
+```
+
+Run the tests:
+
+```
+cd app
+npm install
+npm test
+```
+
+Expected output:
+
+```
+PASS ./server.test.js
+  MERN PoC API
+    √ answers on /ping
+    √ lists records
+    √ creates a record
+```
